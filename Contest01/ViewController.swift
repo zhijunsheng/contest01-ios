@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Contest01
 //
-//  Created by Angie Yan on 2019-11-05.
-//  Copyright © 2019 Angie Yan. All rights reserved.
+//  Created by Peter Shi on 2019-11-05.
+//  Copyright © 2019 Peter Shi. All rights reserved.
 //
 
 import UIKit
