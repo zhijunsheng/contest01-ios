@@ -14,31 +14,55 @@ class CanvasView: UIView {
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
-        let linePath = UIBezierPath()
-        linePath.move(to: CGPoint(x: 20, y: 100))
-        linePath.addLine(to: CGPoint(x: 20, y: 120))
-        linePath.stroke()
+
+        let square = UIBezierPath(rect: CGRect(x: 100, y: 300, width: 50, height: 50))
+        #colorLiteral(red: 1, green: 0.9975315701, blue: 0.2196628204, alpha: 1).setFill()
+        square.fill()
         
-        let circlePath = UIBezierPath(arcCenter: CGPoint(x: 100, y: 100), radius: 100, startAngle: 3, endAngle: CGFloat.pi * 2, clockwise: true)
-        circlePath.stroke()
-        
-        let trianglePath = UIBezierPath()
-        trianglePath.move(to: CGPoint(x: 100, y: 200))
-        trianglePath.addLine(to: CGPoint(x: 100, y: 300))
-        trianglePath.addLine(to: CGPoint(x: 200, y: 300))
-        trianglePath.close()
-        
-        trianglePath.lineWidth = 2
-        #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1).setStroke()
-        trianglePath.stroke()
-        #colorLiteral(red: 0.6965486067, green: 1, blue: 0.9644980178, alpha: 1).setFill()
-        trianglePath.fill()
-        
-        
-        
+        let square1 = UIBezierPath(rect: CGRect(x: 100, y: 300, width: 40, height: 100))
+        let shape1Colour = UIColor(red: 0.8, green: 0.5, blue: 1, alpha: 0.5)
+        shape1Colour.setFill()
+        square1.fill()
+
+       
+        randomShapes()
+        randomCircles()
+
+    }
     
-        // Drawing code
+    
+    
+    func randomShapes() {
+        for i in 0..<100 {
+            let randomX = CGFloat(arc4random() % 400)
+            let randomY = CGFloat(arc4random() % 400)
+            let square = UIBezierPath(rect: CGRect(x: randomX, y: randomY, width: 80, height: 80))
+            square.stroke()
+        }
+    }
+    
+    func randomCircles() {
+        for i in 0..<50 {
+            let randomX = CGFloat(arc4random() % 700)
+            let randomY = CGFloat(arc4random() % 700)
+            let randomRadius = CGFloat(arc4random() % 400)
+            let circle = UIBezierPath(arcCenter: CGPoint(x: randomX, y: randomY), radius: randomRadius, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+            circle.lineWidth = 2
+            circle.stroke()
+            
+            let randomR = CGFloat(arc4random() % 100) / 100
+            let randomG = CGFloat(arc4random() % 100) / 100
+            let randomB = CGFloat(arc4random() % 100) / 100
+            let colour = UIColor(red: randomR, green: randomG, blue: randomB, alpha: 0.3)
+            colour.setFill()
+            circle.fill()
+
+        }
     }
  
 
 }
+
+
+
+
