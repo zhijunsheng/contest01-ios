@@ -11,7 +11,21 @@ import UIKit
 class MyView: UIView {
     
     override func draw(_ rect: CGRect) {
+        drawCircles()
+        drawHair()
+    }
+    
+    func drawCircles() {
+        let randomX: CGFloat = CGFloat(arc4random() % 500)
+        let randomY: CGFloat = CGFloat(arc4random() % 500)
+    
+        let pencil = UIBezierPath(arcCenter:CGPoint(x: randomX, y: randomY)  , radius: 130, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1).setFill()
+        pencil.fill()
         
+    }
+    
+    func drawHair() {
         let pen = UIBezierPath()
         pen.move(to: CGPoint(x: 300, y: 300))
         pen.addLine(to: CGPoint(x: 130, y: 130))
