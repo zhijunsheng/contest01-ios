@@ -9,31 +9,13 @@
 import UIKit
 
 class CanvasView: UIView {
-
-   
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
-
-        let square = UIBezierPath(rect: CGRect(x: 100, y: 300, width: 50, height: 50))
-        #colorLiteral(red: 1, green: 0.9975315701, blue: 0.2196628204, alpha: 1).setFill()
-        square.fill()
-        
-        let square1 = UIBezierPath(rect: CGRect(x: 100, y: 300, width: 40, height: 100))
-        let shape1Colour = UIColor(red: 0.8, green: 0.5, blue: 1, alpha: 0.5)
-        shape1Colour.setFill()
-        square1.fill()
-
-       
         randomShapes()
         randomCircles()
-
     }
     
-    
-    
     func randomShapes() {
-        for i in 0..<100 {
+        for _ in 0..<100 {
             let randomX = CGFloat(arc4random() % 400)
             let randomY = CGFloat(arc4random() % 400)
             let square = UIBezierPath(rect: CGRect(x: randomX, y: randomY, width: 80, height: 80))
@@ -42,7 +24,7 @@ class CanvasView: UIView {
     }
     
     func randomCircles() {
-        for i in 0..<50 {
+        for _ in 0..<50 {
             let randomX = CGFloat(arc4random() % 700)
             let randomY = CGFloat(arc4random() % 700)
             let randomRadius = CGFloat(arc4random() % 400)
@@ -56,13 +38,6 @@ class CanvasView: UIView {
             let colour = UIColor(red: randomR, green: randomG, blue: randomB, alpha: 0.3)
             colour.setFill()
             circle.fill()
-
         }
     }
- 
-
 }
-
-
-
-
