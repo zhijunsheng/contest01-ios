@@ -54,10 +54,10 @@ class CanvasView: UIView {
     }
     
     func drawSquares()  {
-        for _ in 0..<1000 {
-            let randomX: CGFloat = CGFloat(Int(arc4random()) % Int(bounds.width))
-            let randomY: CGFloat = CGFloat(Int(arc4random()) % Int(bounds.height))
-            let pen = UIBezierPath(rect: CGRect(x: randomX, y: randomY, width: 90, height: 90))
+        for _ in 0..<3000 {
+            let randomX: CGFloat = CGFloat(Int(arc4random()) % Int(bounds.width + 3))
+            let randomY: CGFloat = CGFloat(Int(arc4random()) % Int(bounds.height + 5))
+            let pen = UIBezierPath(rect: CGRect(x: randomX, y: randomY, width: 120, height: 120))
             pen.lineWidth = 2
             pen.stroke()
             
