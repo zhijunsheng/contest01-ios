@@ -12,13 +12,11 @@ class CanvasView: UIView {
 
     override func draw(_ rect: CGRect) {
         drawGrid()
-        drawStick()
         drawPuck()
-        drawTape1()
-        drawTape2()
-        drawStick1()
-        drawStick2()
-        drawStick3()
+        drawTapeTop()
+        drawTapeBottom()
+        drawStickLong()
+        drawStickEdge()
         drawHead()
         drawLeftEye()
         drawRightEye()
@@ -37,28 +35,7 @@ class CanvasView: UIView {
         drawRightFinger()
     }
     
-    func drawStick()  {
-        let pencil = UIBezierPath()
-        pencil.move(to: CGPoint(x: 200, y: 300))
-        pencil.addLine(to: CGPoint(x: 200, y: 700))
-        
-        pencil.move(to: CGPoint(x: 220, y: 300))
-        pencil.addLine(to: CGPoint(x: 220, y: 740))
-        
-        pencil.move(to: CGPoint(x: 100, y: 700))
-        pencil.addLine(to: CGPoint(x: 200, y: 700))
-        
-        pencil.move(to: CGPoint(x: 100, y: 740))
-        pencil.addLine(to: CGPoint(x: 220, y: 740))
-        
-        pencil.move(to: CGPoint(x: 100, y: 700))
-        pencil.addLine(to: CGPoint(x: 100, y: 740))
-        
-        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setStroke()
-        pencil.stroke()
-    }
-    
-    func drawTape1()  {
+    func drawTapeTop()  {
         let pencil = UIBezierPath()
         
         pencil.move(to: CGPoint(x: 200, y: 300))
@@ -71,7 +48,7 @@ class CanvasView: UIView {
         pencil.stroke()
     }
     
-    func drawTape2()  {
+    func drawTapeBottom()  {
         let pencil = UIBezierPath()
         
         pencil.move(to: CGPoint(x: 120, y: 700))
@@ -81,35 +58,25 @@ class CanvasView: UIView {
         pencil.close()
         #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setFill()
         pencil.fill()
-        pencil.stroke()
     }
-    func drawStick1()  {
+    
+    func drawStickLong()  {
         let pencil = UIBezierPath()
         
         pencil.move(to: CGPoint(x: 200, y: 360))
         pencil.addLine(to: CGPoint(x: 220, y: 360))
         pencil.addLine(to: CGPoint(x: 220, y: 740))
-        pencil.addLine(to: CGPoint(x: 200, y: 740))
-        pencil.close()
-        #colorLiteral(red: 0.9807667151, green: 1, blue: 0.002888324389, alpha: 1).setFill()
-        pencil.fill()
-        pencil.stroke()
-    }
-    
-    func drawStick2()  {
-        let pencil = UIBezierPath()
-        
-        pencil.move(to: CGPoint(x: 180, y: 700))
-        pencil.addLine(to: CGPoint(x: 200, y: 700))
-        pencil.addLine(to: CGPoint(x: 200, y: 740))
         pencil.addLine(to: CGPoint(x: 180, y: 740))
+        pencil.addLine(to: CGPoint(x: 180, y: 700))
+        pencil.addLine(to: CGPoint(x: 200, y: 700))
         pencil.close()
         #colorLiteral(red: 0.9807667151, green: 1, blue: 0.002888324389, alpha: 1).setFill()
         pencil.fill()
+        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setStroke()
         pencil.stroke()
     }
     
-    func drawStick3()  {
+    func drawStickEdge()  {
         let pencil = UIBezierPath()
         
         pencil.move(to: CGPoint(x: 100, y: 700))
@@ -119,6 +86,7 @@ class CanvasView: UIView {
         pencil.close()
         #colorLiteral(red: 0.9807667151, green: 1, blue: 0.002888324389, alpha: 1).setFill()
         pencil.fill()
+        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setStroke()
         pencil.stroke()
     }
     
@@ -132,7 +100,6 @@ class CanvasView: UIView {
         pencil.close()
         #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setFill()
         pencil.fill()
-        pencil.stroke()
     }
     
     func drawHead()  {
@@ -283,27 +250,26 @@ class CanvasView: UIView {
         pencil.move(to: CGPoint(x: 400, y: 700))
         pencil.addLine(to: CGPoint(x: 400, y: 740))
         pencil.addLine(to: CGPoint(x: 300, y: 740))
-        pencil.addLine(to: CGPoint(x: 300, y: 700))
+        pencil.addLine(to: CGPoint(x: 300, y: 720))
+        pencil.addLine(to: CGPoint(x: 320, y: 700))
         pencil.close()
         #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).setFill()
         pencil.fill()
         pencil.stroke()
     }
-    
     
     func drawSkates2()  {
         let pencil = UIBezierPath()
-        pencil.move(to: CGPoint(x: 400 + 200, y: 700))
-        pencil.addLine(to: CGPoint(x: 400 + 200, y: 740))
-        pencil.addLine(to: CGPoint(x: 300 + 200, y: 740))
-        pencil.addLine(to: CGPoint(x: 300 + 200, y: 700))
+        pencil.move(to: CGPoint(x: 580, y: 700))
+        pencil.addLine(to: CGPoint(x: 600, y: 720))
+        pencil.addLine(to: CGPoint(x: 600, y: 740))
+        pencil.addLine(to: CGPoint(x: 500, y: 740))
+        pencil.addLine(to: CGPoint(x: 500, y: 700))
         pencil.close()
         #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).setFill()
         pencil.fill()
         pencil.stroke()
-    
     }
-
     
     func drawLeftBlade()  {
         let pencil = UIBezierPath()
@@ -393,8 +359,6 @@ class CanvasView: UIView {
         pencil.addLine(to: CGPoint(x: 800, y: 1000))
         
         #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1).setStroke()
-      
         pencil.stroke()
-   
     }
 }
