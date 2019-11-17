@@ -14,23 +14,37 @@ class CanvasView: UIView {
         drawEmoji()
     }
     
-    
     func drawEmoji() {
         let face = UIBezierPath(arcCenter: CGPoint(x: 350, y: 400), radius: 350, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
         #colorLiteral(red: 0.9577738612, green: 0.9686274529, blue: 0.0223935303, alpha: 1).setFill()
         face.fill()
         
-        let circle13 = UIBezierPath(arcCenter: CGPoint(x: 150, y: 350), radius: 50, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
-        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setFill()
-        circle13.fill()
+        let eyebrow1 = UIBezierPath(arcCenter: CGPoint(x: 170, y: 200), radius: 50, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1).setFill()
+        eyebrow1.fill()
         
-        let circle17 = UIBezierPath(arcCenter: CGPoint(x: 550, y: 350), radius: 50, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
-        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setFill()
-        circle17.fill()
+        let eyebrow2 = UIBezierPath(arcCenter: CGPoint(x: 170, y: 230), radius: 70, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: false)
+        #colorLiteral(red: 0.9577738612, green: 0.9686274529, blue: 0.0223935303, alpha: 1).setFill()
+        eyebrow2.fill()
+    
+        let leftWhite = UIBezierPath(arcCenter: CGPoint(x: 150, y: 350), radius: 80, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).setFill()
+        leftWhite.fill()
         
-        let smile = UIBezierPath(arcCenter: CGPoint(x: 350, y: 500), radius: 150, startAngle: 0, endAngle: CGFloat.pi, clockwise: true)
-        #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1).setFill()
-        smile.fill()
+        let leftPupil = UIBezierPath(arcCenter: CGPoint(x: 150, y: 350), radius: 30, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setFill()
+        leftPupil.fill()
+  
+        let rightWhite = UIBezierPath(arcCenter: CGPoint(x: 550, y: 350), radius: 80, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).setFill()
+        rightWhite.fill()
+        
+        let rightPupil = UIBezierPath(arcCenter: CGPoint(x: 550, y: 350), radius: 30, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setFill()
+        rightPupil.fill()
+        
+        let mouth = UIBezierPath(arcCenter: CGPoint(x: 350, y: 550), radius: 50, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        mouth.fill()
     }
     
     func randomCircles() {
