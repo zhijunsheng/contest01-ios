@@ -20,7 +20,7 @@ class CanvasView: UIView {
         face.fill()
         
         let eyebrow1 = UIBezierPath(arcCenter: CGPoint(x: 170, y: 200), radius: 50, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
-        #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1).setFill()
+        #colorLiteral(red: 0.3098039329, green: 0.2039215714, blue: 0.03921568766, alpha: 1).setFill()
         eyebrow1.fill()
         
         let eyebrow2 = UIBezierPath(arcCenter: CGPoint(x: 170, y: 230), radius: 70, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: false)
@@ -35,6 +35,14 @@ class CanvasView: UIView {
         #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setFill()
         leftPupil.fill()
   
+        let eyebrow4 = UIBezierPath(arcCenter: CGPoint(x: 550, y: 200), radius: 50, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        #colorLiteral(red: 0.3098039329, green: 0.2039215714, blue: 0.03921568766, alpha: 1).setFill()
+        eyebrow4.fill()
+        
+        let eyebrow3 = UIBezierPath(arcCenter: CGPoint(x: 550, y: 230), radius: 70, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: false)
+        #colorLiteral(red: 0.9577738612, green: 0.9686274529, blue: 0.0223935303, alpha: 1).setFill()
+        eyebrow3.fill()
+      
         let rightWhite = UIBezierPath(arcCenter: CGPoint(x: 550, y: 350), radius: 80, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
         #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).setFill()
         rightWhite.fill()
@@ -65,3 +73,8 @@ class CanvasView: UIView {
         }
     }
 }
+
+
+
+
+
