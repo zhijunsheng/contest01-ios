@@ -19,6 +19,23 @@ class CanvasView: UIView {
         drawCircle(x: bounds.width / 2 + 100, y: 578, fillColor: #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1), strokeColor: #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1), radius: 50)
         drawCircle(x: bounds.width / 2 - 100, y: 598, fillColor: #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1), strokeColor: #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1), radius: 20)
         drawCircle(x: bounds.width / 2, y: 637, fillColor: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), strokeColor: #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), radius: 20)
+        drawCircle(x: bounds.width / 2 + 30, y: 457, fillColor: #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1), strokeColor: #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1), radius: 30)
+        drawCircle(x: bounds.width / 2 - 130, y: 400, fillColor: #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1), strokeColor: #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1), radius: 20)
+        drawCircle(x: bounds.width / 2 - 100, y: 400, fillColor: #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1), strokeColor: #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1), radius: 40)
+        drawCircle(x: bounds.width / 2 - 60, y: 150, fillColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), strokeColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), radius: 2)
+        drawCircle(x: bounds.width / 2 + 60, y: 150, fillColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), strokeColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), radius: 2)
+        drawCircle(x: bounds.width / 2 - 100, y: 400, fillColor: #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1), strokeColor: #colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1), radius: 20)
+        drawCircle(x: bounds.width / 2 - 130, y: 589, fillColor: #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1), strokeColor: #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1), radius: 20)
+        
+        let pen = UIBezierPath(rect: CGRect(x: 50, y: 700, width: bounds.width - 100, height: bounds.height - 800))
+        
+        #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1).setFill()
+        pen.fill()
+               
+        #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1).setStroke()
+        pen.lineWidth = 3
+        pen.stroke()
+        
     }
     
     func drawCircle(x: CGFloat, y: CGFloat, fillColor: UIColor, strokeColor: UIColor, radius: CGFloat) {
