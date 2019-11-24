@@ -11,7 +11,7 @@ import UIKit
 class CanvasView: UIView {
 
     override func draw(_ rect: CGRect) {
-        drawGrid()
+//        drawGrid()
     
         let rect = UIBezierPath()
         rect.move(to: CGPoint(x: 100, y: 330))
@@ -53,7 +53,7 @@ class CanvasView: UIView {
     }
     
     func drawRim() {
-        let oval = UIBezierPath(ovalIn: CGRect(x: 185, y: 430, width: 120, height: 40))
+        let oval = UIBezierPath(ovalIn: CGRect(x: 185, y: 437, width: 120, height: 40))
         oval.lineWidth = 3
         #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setStroke()
         oval.stroke()
